@@ -11,19 +11,11 @@ RSpec.describe "book index" do
     expect(page).to have_content(book_1.title)
     expect(page).to have_content(book_1.pages)
     expect(page).to have_content(book_1.publication_year)
-    expect(page).to have_content(book_1.author.name)
+    expect(page).to have_content(author_1.name)
 
     expect(page).to have_content(book_2.title)
     expect(page).to have_content(book_2.pages)
     expect(page).to have_content(book_2.publication_year)
-    expect(page).to have_content(book_2.author.name)
+    expect(page).to have_content(author_1.name)
   end
 end
-
-    # As a user,
-    # When I visit '/books'
-    # Then I see each book in the system including the book's:
-    #   - title
-    #   - number of pages
-    #   - publication year
-    #   - the name of each author that wrote the book

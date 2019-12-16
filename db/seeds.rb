@@ -5,3 +5,8 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+author_1 = Author.create(name: "Charles Dickens")
+book_1 = Book.create(title:"Oliver Twist", pages: "299", publication_year: "1850")
+book_2 = Book.create(title: "A Christmas Carol", pages: "150", publication_year: "1880")
+BookAuthor.create(author_id: author_1.id, book_id: book_1.id)
+BookAuthor.create(author_id: author_1.id, book_id: book_2.id)
